@@ -19,8 +19,10 @@ struct WeatherModel {
     func performRequest(urlString: String) {
         //1. Create a URL object
         let url = URL(string: urlString)!
+        
         //2. Create a URLSession
         let session = URLSession(configuration: .default)
+        
         //3. Give URLSession a task
         let task = session.dataTask(with: url) { data, response, error in
             if error != nil {
@@ -29,14 +31,17 @@ struct WeatherModel {
             }
             
             if let safeData = data {
-                let dataString = String(data: safeData, encoding: .utf8)
-                print(dataString!)
+                self.parseJSON(weatherData: safeData)
             }
         }
         //4. Start task
         task.resume()
     }
     
+    func parseJSON(weatherData: Data) {
+        
+    }
+}
     
     
     
@@ -61,4 +66,4 @@ struct WeatherModel {
 //            print(dataString!)
 //        }
 //    }
-}
+

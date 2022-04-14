@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1FD4902808C6C5005B43B7 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1FD48F2808C6C5005B43B7 /* WeatherData.swift */; };
 		CF582BED2807715D001F8CE1 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF582BEC2807715D001F8CE1 /* WeatherModel.swift */; };
 		CFEC3A0728062967001352A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC3A0628062967001352A6 /* AppDelegate.swift */; };
 		CFEC3A0928062967001352A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEC3A0828062967001352A6 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF1FD48F2808C6C5005B43B7 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		CF582BEC2807715D001F8CE1 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		CFEC3A0328062967001352A6 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEC3A0628062967001352A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				CF582BEC2807715D001F8CE1 /* WeatherModel.swift */,
+				CF1FD48F2808C6C5005B43B7 /* WeatherData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFEC3A0B28062967001352A6 /* ViewController.swift in Sources */,
+				CF1FD4902808C6C5005B43B7 /* WeatherData.swift in Sources */,
 				CFEC3A0728062967001352A6 /* AppDelegate.swift in Sources */,
 				CF582BED2807715D001F8CE1 /* WeatherModel.swift in Sources */,
 				CFEC3A0928062967001352A6 /* SceneDelegate.swift in Sources */,
