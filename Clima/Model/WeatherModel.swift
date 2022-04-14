@@ -16,6 +16,7 @@ struct WeatherModel {
         performRequest(urlString: urlString)
     }
     
+    //Will need to fix this because when there is a space left at the end of the search, the return pops up as nil
     func performRequest(urlString: String) {
         //1. Create a URL object
         let url = URL(string: urlString)!
@@ -43,32 +44,18 @@ struct WeatherModel {
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
             let id = decodedData.weather[0].id
-            print(getConditionName(weatherID: id))
+            let temp = decodedData.main.temp
+            let city = decodedData.name
+            
+            let weather = WeatherSwitch(conditionID: id, cityName: city, temperature: temp)
+            print(weather.temperatureString)
+            
         } catch {
             print(error)
         }
     }
     
-    func getConditionName(weatherID: Int) -> String {
-        switch weatherID {
-        case 200...232:
-            return "cloud.bolt.rain"
-        case 300...321:
-            return "cloud.drizzle"
-        case 500...531:
-            return "cloud.heavyrain"
-        case 600...622:
-            return "cloud.snow"
-        case 701...781:
-            return "smoke"
-        case 800:
-            return "sun.max"
-        case 801...804:
-            return "cloud.bolt"
-        default:
-            return "cloud"
-        }
-    }
+    
 }
     
     
