@@ -19,4 +19,5 @@ struct Main: Decodable {
 
 struct Description: Decodable {
     let description: String
+    let id: Int
 }
